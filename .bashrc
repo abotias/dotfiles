@@ -6,7 +6,9 @@ g() {
     grep -iR "$1" * 2>/dev/null
 }
 
-
+gr() {
+  grep -irl "$1" 2>/dev/null
+}
 
 # If not running interactively, don't do anything
 case $- in
