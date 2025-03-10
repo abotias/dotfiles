@@ -18,7 +18,21 @@ esac
 
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
-HISTCONTROL=ignoreboth
+HISTCONTROL="ignorespace:ignoredups"
+HISTIGNORE="ll:ls"
+HISTIGNORE+=":df -h"
+HISTIGNORE+=":reset"
+HISTIGNORE+=":clear"
+HISTIGNORE+=":history"
+HISTIGNORE+=":pwd"
+HISTIGNORE+=":date:cal"
+HISTIGNORE+=":uptime"
+HISTIGNORE+=":sync"
+HISTIGNORE+=":htop"
+HISTIGNORE+=":id"
+HISTIGNORE+=":hostnamectl"
+HISTIGNORE+=":who:w"
+
 
 # append to the history file, don't overwrite it
 shopt -s histappend
